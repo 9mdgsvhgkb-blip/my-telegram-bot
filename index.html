@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<title>AI Analyst: CS2 Market</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<script src="https://telegram.org/js/telegram-web-app.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+<style>
+  body {margin:0; padding:0; font-family:sans-serif; background:#f5f5f5; color:#222;}
+  h1,h2 {color:#facc00; text-align:center;}
+  .container {padding:15px;}
+  .buttons, .items {display:flex; flex-wrap:wrap; justify-content:center; gap:10px; margin-top:20px;}
+  button {padding:12px 20px; border:none; border-radius:10px; font-weight:bold; cursor:pointer; background:#fff; color:#222; border:2px solid #facc00; transition:.2s;}
+  button:hover {background:#facc00; color:#fff;}
+  .item {background:#fff; border:2px solid #facc00; border-radius:12px; width:150px; text-align:center; cursor:pointer; transition:.2s;}
+  .item:hover {transform:scale(1.05);}
+  .item img {width:80px; height:80px; object-fit:contain; margin-bottom:5px;}
+  .trend-up {color:#0a0; font-weight:bold;}
+  .trend-down {color:#a00; font-weight:bold;}
+  .backBtn {margin-top:15px; padding:10px 20px; border-radius:8px; border:2px solid #facc00; background:#fff; cursor:pointer; font-weight:bold;}
+  .backBtn:hover {background:#facc00; color:#fff;}
+  #priceChart {max-width:100%; margin-top:15px;}
+  label {margin-right:5px; font-weight:bold;}
+  select {padding:5px 10px; border-radius:5px; border:1px solid #facc00;}
+</style>
+</head>
+<body>
+
+<!-- Главный экран -->
+<div class="container" id="screen1">
+  <h1>💎 AI Analyst: CS2 Market</h1>
+  <div class="buttons">
+    <button data-cat="knives">Ножи</button>
+    <button data-cat="weapons">Оружие</button>
+    <button data-cat="agents">Агенты</button>
+  </div>
+</div>
+
+<!-- Список предметов -->
+<div class="container" id="screen2" style="display:none;">
+  <h2 id="categoryTitle"></h2>
+  <div class="items" id="itemsContainer"></div>
+  <button class="backBtn" id="backBtn">⬅ Назад</button>
+</div>
+
+<!-- Детализация предмета -->
+<div class="container" id="screen3" style="display:none;">
+  <h2 id="itemName"></h2>
+  <img id="itemImage" src="" alt="" style="width:150px;height:150px;object-fit:contain;margin-bottom:10px;">
+  <div>
+    <label for="conditionSelect">Состояние:</label>
+    <select id="conditionSelect"></select>
+  </div>
+  <div>Текущая цена: $<span id="itemPrice"></span></div>
+  <div>Прогноз: <span id="itemTrend"></span></div>
+  <div>Рентабельность покупки: <span id="itemProfit"></span>%</div>
+  <canvas id="priceChart"></canvas>
+  <button class="backBtn" id="itemBackBtn">⬅ Назад к списку</button>
+</div>
+
+<script>
+const tg = window.Telegram.WebApp;
+tg.ready();
+
+let currentCategory = null;
+let chart = null;
+
+const screen1 = document.getElementById('screen1');
+const screen2 = document.getElementById('screen2');
+const screen3 = document.getElementById('screen3');
+
+const categoryTitle = document.getElementById('categoryTitle');
+const itemsContainer = document.getElementById('itemsContainer');
+
+const itemName = document.getElementById('itemName');
+const itemImage = document.getElementById('itemImage');
+const itemPrice = document.getElementById('itemPrice');
+const itemTrend = document.getElementById('itemTrend');
+const itemProfit = document.getElementById('itemProfit');
+const priceChart = document.getElementById('priceChart');
+const conditionSelect = document.getElementById('conditionSelect');
+
+// Кнопки назад
+document.getElementById('backBtn').onclick = ()=>{ screen2.style.display="none"; screen1.style.display="block"; };
+document.getElementById('itemBackBtn').onclick = ()=>{ screen3.style.display="none"; screen2.style.display="block"; if(chart){ chart.destroy(); chart=null; } };
+
+// Получение всех предметов через API бота
+function fetchItems(category){
+  currentCategory = category;
+  fetch(`https://your-bot-server.com/api/items?category=${category}`)
+    .then(res => res.json())
+    .then(data => { renderItems(data); })
+    .catch(err => console.error(err));
+}
+
+// Отображение списка предметов
+function renderItems(items){
+  itemsContainer.innerHTML="";
+  items.forEach(skin=>{
+    const div = document.createElement('div');
+    div.className="item";
+    div.innerHTML = `<img src="${skin.image}" alt="${skin.name}"><div>${skin.name}</div>`;
+    div.onclick = ()=>{
+      screen2.style.display="none";
+      screen3.style.display="block";
+      showSkinDetail(skin);
+    };
+    itemsContainer.appendChild(div);
+  });
+}
+
+// Показ детализации скина с выбором состояния
+function showSkinDetail(skin){
+  itemName.textContent = skin.name;
+  itemImage.src = skin.image;
+
+  // Заполняем select вариантами
+  conditionSelect.innerHTML = "";
+  skin.variants.forEach((v,i)=>{
+    const opt = document.createElement('option');
+    opt.value = i;
+    opt.textContent = v.condition;
+    conditionSelect.appendChild(opt);
+  });
+
+  updateSkinVariant(skin,0);
+
+  conditionSelect.onchange = ()=>{
+    const idx = conditionSelect.value;
+    updateSkinVariant(skin, idx);
+  };
+}
+
+// Обновление данных для выбранного состояния
+function updateSkinVariant(skin, idx){
+  const v = skin.variants[idx];
+  itemPrice.textContent = v.price;
+  itemTrend.textContent = v.trend==='up'?"🔺 Рост":"🔻 Падение";
+  itemTrend.className = v.trend==='up'?'trend-up':'trend-down';
+  itemProfit.textContent = v.profit;
+
+  // график истории цен
+  const labels = v.history.map((_,i)=>`T-${v.history.length-i}`);
+  const dataPoints = v.history;
+  if(chart){ chart.destroy(); chart=null; }
+  chart = new Chart(priceChart,{
+    type:'line',
+    data:{
+      labels: labels,
+      datasets:[{
+        label:'Цена ($)',
+        data: dataPoints,
+        borderColor:'#facc00',
+        backgroundColor:'rgba(250,204,0,0.2)',
+        tension:0.2
+      }]
+    },
+    options:{ responsive:true, plugins:{legend:{display:false}} }
+  });
+}
+
+// При выборе категории
+screen1.querySelectorAll('button').forEach(btn=>{
+  btn.onclick = ()=>{
+    currentCategory = btn.dataset.cat;
+    categoryTitle.textContent = currentCategory==="knives"?"Ножи":currentCategory==="weapons"?"Оружие":"Агенты";
+    screen1.style.display="none";
+    screen2.style.display="block";
+    fetchItems(currentCategory);
+  };
+});
+
+// Автообновление данных каждые 30 секунд
+setInterval(()=>{ if(currentCategory){ fetchItems(currentCategory); } }, 30000);
+</script>
+</body>
+</html>
