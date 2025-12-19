@@ -40,7 +40,7 @@ input::placeholder {
 }  
 
 .auth-logo img {
-  width: 150px;     /* или любой размер по ширине */
+  width: 120px;     /* или любой размер по ширине */
   height: auto;     /* сохраняет пропорции */
   display: block;   /* убирает лишние отступы под изображением */
   margin: 0 auto;   /* по центру */
@@ -122,3 +122,15 @@ input::placeholder {
 #registerForm .primary:hover {
   background-color: #6655cc;
 }
+
+.auth-card {
+  background-color: #6A5ACD; /* рамка с цветом */
+  border: 2px solid #483D8B;
+  border-radius: 20px;
+  padding: 40px 30px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-width: 320px;
+}
+
