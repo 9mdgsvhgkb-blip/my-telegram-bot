@@ -89,3 +89,36 @@ input::placeholder {
 .auth-container form .primary:hover {
   background-color: #6655cc;
 }
+
+#registerForm {
+  display: flex;
+  flex-direction: column;
+  align-items: center;       /* центрируем поля и кнопку */
+  gap: 20px;                 /* расстояние между полями */
+}
+
+/* Поля ввода */
+#registerForm input {
+  width: 280px;
+  padding: 14px;
+  border: none;
+  border-radius: 8px;
+  font-size: 16px;
+  text-align: center;        /* текст внутри полей по центру */
+}
+
+/* Кнопка */
+#registerForm .primary {
+  width: 280px;
+  padding: 14px;
+  background-color: #7c7cff;
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+#registerForm .primary:hover {
+  background-color: #6655cc;
+}
