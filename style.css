@@ -58,7 +58,7 @@ input::placeholder {
 
 /* Логотип */
 .auth-logo img {
-  width: 150px;
+  width: 110px;
   height: auto;
   margin-bottom: 40px;
 }
@@ -122,15 +122,3 @@ input::placeholder {
 #registerForm .primary:hover {
   background-color: #6655cc;
 }
-
-.auth-card {
-  background-color: #6A5ACD; /* рамка с цветом */
-  border: 2px solid #483D8B;
-  border-radius: 20px;
-  padding: 40px 30px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  min-width: 320px;
-}
-
