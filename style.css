@@ -45,3 +45,47 @@ input::placeholder {
   display: block;   /* убирает лишние отступы под изображением */
   margin: 0 auto;   /* по центру */
 }
+
+/* Центрирование контейнера */
+.auth-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  background-color: #483D8B; /* фон всей страницы */
+}
+
+/* Логотип */
+.auth-logo img {
+  width: 150px;
+  height: auto;
+  margin-bottom: 40px;
+}
+
+/* Поля ввода */
+.auth-container form input {
+  width: 280px;
+  padding: 14px;
+  margin-bottom: 20px;
+  border: none;
+  border-radius: 8px;
+  font-size: 16px;
+}
+
+/* Кнопка */
+.auth-container form .primary {
+  width: 280px;
+  padding: 14px;
+  background-color: #7c7cff;
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+/* Кнопка при наведении */
+.auth-container form .primary:hover {
+  background-color: #6655cc;
+}
