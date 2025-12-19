@@ -38,3 +38,10 @@ input::placeholder {
   background: var(--card);  
   border: 1px solid var(--border);  
 }  
+
+.auth-logo img {
+  width: 150px;     /* или любой размер по ширине */
+  height: auto;     /* сохраняет пропорции */
+  display: block;   /* убирает лишние отступы под изображением */
+  margin: 0 auto;   /* по центру */
+}
