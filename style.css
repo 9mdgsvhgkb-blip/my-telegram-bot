@@ -15,6 +15,7 @@ body {
   background: var(--bg);  
   color: var(--text);  
   overflow-x: hidden;  
+  overflow: hidden;
 }  
   
 /* Фон всех блоков */  
