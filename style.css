@@ -46,7 +46,7 @@ input::placeholder {
 
 /* Логотип */
 .auth-logo img {
-  width: 199px;
+  width: 80px;
   height: auto;
   margin-bottom: 1px;
 }
