@@ -10,13 +10,17 @@
 }  
   
 /* Основной фон */  
-body {  
-  font-family: Inter, sans-serif;  
-  background: var(--bg);  
-  color: var(--text);  
-  overflow-x: hidden;  
-  overflow: hidden;
-}  
+body {
+  margin: 0;
+  font-family: Inter, sans-serif;
+  background: var(--bg);
+  color: var(--text);
+
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
   
 /* Фон всех блоков */  
 .auth-container {  
