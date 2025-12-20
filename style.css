@@ -46,9 +46,9 @@ input::placeholder {
 
 /* Логотип */
 .auth-logo img {
-  width: 90px;
+  width: 199px;
   height: auto;
-  margin-bottom: 10px;
+  margin-bottom: 1px;
 }
 
 /* Поля ввода */
