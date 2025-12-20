@@ -190,3 +190,58 @@ body {
   color: #ffffff;
   text-decoration: underline;
 }
+
+/* Футер с ссылкой */
+.auth-footer {
+  margin: 0;
+  text-align: center;
+  font-size: 14px;
+  color: rgba(255,255,255,0.8);
+}
+
+.auth-footer a {
+  color: #7c7cff;
+  text-decoration: none;
+}
+
+.auth-footer a:hover {
+  text-decoration: underline;
+  color: #6655cc;
+}
+
+/* Разделитель с линиями и текстом "или" */
+.divider {
+  display: flex;
+  align-items: center;
+  text-align: center;
+  width: 100%;
+  margin: 10px 0;
+  color: rgba(255,255,255,0.65);
+}
+
+.divider::before,
+.divider::after {
+  content: '';
+  flex: 1;
+  border-bottom: 1px solid rgba(255,255,255,0.3);
+}
+
+.divider span {
+  margin: 0 10px;
+}
+
+/* Кнопка входа через Telegram */
+.tg-login {
+  width: 280px;
+  padding: 12px;
+  border: none;
+  border-radius: 8px;
+  background-color: #26a5e4; /* синий Telegram */
+  color: #fff;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+.tg-login:hover {
+  background-color: #1d8ec1;
+}
