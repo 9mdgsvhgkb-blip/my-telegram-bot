@@ -245,3 +245,11 @@ body {
 .tg-login:hover {
   background-color: #1d8ec1;
 }
+
+input::placeholder {
+  transition: color 0.2s ease;
+}
+
+input:focus::placeholder {
+  color: transparent;
+}
