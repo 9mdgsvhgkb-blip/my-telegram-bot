@@ -82,7 +82,7 @@ input::placeholder {
   display: flex;
   flex-direction: column;
   align-items: center;       /* центрируем поля и кнопку */
-  gap: 20px;                 /* расстояние между полями */
+  gap: 10px;                 /* расстояние между полями */
 }
 
 /* Поля ввода */
