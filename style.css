@@ -173,3 +173,20 @@ body {
   text-decoration: underline;  /* подчёркивание при наведении */
   color: #ffffff;
 }
+
+/* цвет текста в полях */
+#registerForm input {
+  color: #000000 !important;
+  -webkit-text-fill-color: #000000 !important;
+}
+
+/* ссылка Войти */
+.auth-footer a {
+  color: #7c7cff;
+  text-decoration: none;
+}
+
+.auth-footer a:hover {
+  color: #ffffff;
+  text-decoration: underline;
+}
