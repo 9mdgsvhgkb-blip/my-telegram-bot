@@ -246,14 +246,6 @@ body {
   background-color: #1d8ec1;
 }
 
-input::placeholder {
-  transition: color 0.2s ease;
-}
-
-input:focus::placeholder {
-  color: transparent;
-}
-
 .auth-footer a {
   color: rgba(255,255,255,0.8) !important;
   border-bottom: 2px solid rgba(255,255,255,0.8) !important;
