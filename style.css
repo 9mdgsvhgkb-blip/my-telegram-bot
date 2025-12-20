@@ -249,7 +249,16 @@ body {
 .auth-footer a {
   color: rgba(255,255,255,0.8) !important;
   border-bottom: 1px solid rgba(255,255,255,0.8) !important;
+}
 
 input:focus::placeholder {
   opacity: 0;
+}
+
+input:focus::placeholder {
+  color: transparent;
+}
+
+input:focus::-webkit-input-placeholder {
+  color: transparent;
 }
