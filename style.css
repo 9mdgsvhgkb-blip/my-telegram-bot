@@ -255,5 +255,5 @@ input:focus::placeholder {
 }
 
 .auth-footer a {
-  color: #ffffff !important;
-  border-bottom: 2px solid #ffffff !important;
+  color: rgba(255,255,255,0.8) !important;
+  border-bottom: 2px solid rgba(255,255,255,0.8) !important;
