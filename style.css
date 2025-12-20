@@ -167,3 +167,8 @@ body {
   font-size: 14px;
   color: rgba(255,255,255,0.8);
 }
+
+.auth-footer a:hover {
+  text-decoration: underline;  /* подчёркивание при наведении */
+  color: #ffffff;
+}
