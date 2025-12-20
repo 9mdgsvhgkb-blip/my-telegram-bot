@@ -176,8 +176,8 @@ body {
 
 /* цвет текста в полях */
 #registerForm input {
-  color: #000000 !important;
-  -webkit-text-fill-color: #000000 !important;
+  color: #2e2a27 !important;
+  -webkit-text-fill-color: #2e2a27 !important;
 }
 
 /* ссылка Войти */
