@@ -253,3 +253,7 @@ input::placeholder {
 input:focus::placeholder {
   color: transparent;
 }
+
+.auth-footer a {
+  color: #ffffff !important;
+  border-bottom: 2px solid #ffffff !important;
