@@ -123,3 +123,9 @@ input::placeholder {
 #registerForm .primary:hover {
   background-color: #6655cc;
 }
+
+img {
+  -webkit-user-drag: none;
+  user-select: none;
+  pointer-events: none;
+}
