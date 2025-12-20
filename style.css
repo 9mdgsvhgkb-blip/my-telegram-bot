@@ -162,7 +162,7 @@ body {
 }
 
 .auth-footer {
-  margin-top: 8px;       /* минимальный отступ сверху */
+  margin-top: 3px;       /* минимальный отступ сверху */
   text-align: center;    /* центрирование */
   font-size: 14px;
   color: rgba(255,255,255,0.8);
