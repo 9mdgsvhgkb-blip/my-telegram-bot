@@ -154,6 +154,37 @@ body {
   height: 20px;        
   color: #e5e7eb;        
 }        
+
+.main-content {
+  margin-left: 0;
+  padding: 30px 20px;
+  transition: margin-left 0.25s ease;
+}
+
+.main-content h2 {
+  color: #8b5cf6; 
+  margin-bottom: 15px;
+}
+
+.main-content p {
+  margin-bottom: 10px;
+}
+
+.main-content .support-list li {
+  margin-bottom: 8px;
+  font-size: 14px;
+}
+
+.main-content .support-list a {
+  color: #6366f1;
+  text-decoration: underline;
+}
+
+@media (min-width: 1024px) {
+  .main-content {
+    margin-left: 300px;
+  }
+}
         
 @media (min-width: 1024px) {        
   body {        
