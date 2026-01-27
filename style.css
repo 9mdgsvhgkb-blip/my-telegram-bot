@@ -1,82 +1,182 @@
-:root {        
-  --bg: #483D8B;        
-  --bg-soft: rgba(255, 255, 255, 0.15);        
-  --card: rgba(255,255,255,0.05);        
-  --border: rgba(255,255,255,0.25);        
-  --text: #ffffff;        
-  --muted: rgba(255,255,255,0.65);        
-  --accent: #7c7cff;        
-  --glow: #7c7cff55;        
-}
-
-body {      
-  margin: 0;      
-  font-family: Inter, sans-serif;      
-  background: var(--bg);      
-  color: var(--text);      
-  min-height: 100vh;      
-  display: flex;      
-  align-items: center;      
-  justify-content: center;      
-}
-
-.auth-container {      
-  width: 100%;      
-  max-width: 600px;      
-  padding: 30px 40px;      
-  border-radius: 22px;      
-  background: var(--bg-soft);      
-  backdrop-filter: blur(20px);      
-  -webkit-backdrop-filter: blur(20px);      
-  border: 1px solid var(--border);      
-  box-shadow: 0 30px 80px rgba(0,0,0,0.25);      
-  display: flex;      
-  flex-direction: column;      
-  align-items: center;      
-  gap: 20px;      
-}
-
-.auth-logo img {      
-  width: 80px;      
-  height: auto;      
-  margin-bottom: 10px;      
-}
-
-h1, h2, h3 {      
-  color: var(--accent);      
-  text-align: center;      
-}
-
-.section {      
-  background: var(--card);      
-  padding: 15px 20px;      
-  border-radius: 12px;      
-  width: 100%;      
-}
-
-.section p, .section ul {      
-  color: var(--text);      
-  font-size: 14px;      
-}
-
-.section ul {      
-  padding-left: 20px;      
-}
-
-a {      
-  color: var(--accent);      
-  text-decoration: none;      
-}
-
-a:hover {      
-  text-decoration: underline;      
-  color: #6655cc;      
-}
-
-.terms-text {      
-  font-size: 12px;      
-  color: var(--muted);      
-  text-align: center;      
-  line-height: 1.4;      
-  max-width: 500px;      
-}
+* {        
+  margin: 0;        
+  padding: 0;        
+  box-sizing: border-box;        
+  font-family: "Inter", system-ui, sans-serif;        
+}        
+        
+body {        
+  background: #0e0f13;        
+  color: #e5e7eb;        
+  min-height: 100vh;        
+  overflow-x: hidden;      
+  padding-top: 69px;  
+}        
+      
+#overlay {        
+  position: fixed;        
+  inset: 0;        
+  background: rgba(0, 0, 0, 0.45);        
+  backdrop-filter: blur(4px);       
+  visibility: hidden;      
+  pointer-events: none;        
+  transition: opacity 0.3s ease;        
+  z-index: 999;        
+}        
+        
+#overlay.active {      
+  opacity: 1;      
+  visibility: visible;      
+  pointer-events: auto;      
+}        
+        
+.header {        
+  height: 64px;        
+  background: #111318;        
+  border-bottom: 1px solid #1f2430;        
+  display: flex;        
+  align-items: center;        
+  padding: 0 20px;        
+  position: fixed;      
+  top: 0;  
+  width: 100%;        
+  z-index: 1000;        
+}        
+        
+.hamburger {        
+  width: 28px;        
+  cursor: pointer;        
+}        
+        
+.hamburger span {        
+  display: block;        
+  height: 2px;        
+  background: #e5e7eb;        
+  margin: 6px 0;        
+}        
+        
+.center {        
+  margin: 0 auto;        
+  display: flex;        
+  align-items: center;        
+  gap: 10px;        
+  justify-content: center;        
+  transform: translateX(-20px);        
+}        
+        
+.center img {        
+  user-select: none;        
+  -webkit-user-drag: none;        
+  -webkit-user-select: none;        
+  -moz-user-select: none;        
+  -ms-user-select: none;        
+  pointer-events: none;        
+  width: 30px;        
+}        
+        
+.center h1 {        
+  font-size: 20px;        
+  font-weight: 600;        
+}        
+        
+.sidebar {        
+  position: fixed;        
+  top: 0;        
+  left: -280px;        
+  width: 280px;        
+  height: 100%;        
+  background: #111318;        
+  border-right: 1px solid #1f2430;        
+  z-index: 1000;        
+  transition: left 0.25s ease;        
+}        
+        
+.sidebar.active {        
+  left: 0;        
+}        
+        
+.sidebar-top {        
+  display: flex;        
+  align-items: center;        
+  justify-content: space-between;        
+  padding: 16px;        
+  border-bottom: 1px solid #1f2430;        
+}        
+        
+.sidebar-logo {        
+  user-select: none;        
+  -webkit-user-drag: none;        
+  -webkit-user-select: none;        
+  -moz-user-select: none;        
+  -ms-user-select: none;        
+  pointer-events: none;        
+  width: 32px;        
+}        
+        
+.close-btn {        
+  font-size: 26px;        
+  cursor: pointer;        
+  color: #9ca3af;        
+}        
+        
+.sidebar ul {        
+  list-style: none;        
+  padding: 12px;        
+  margin: 0;        
+}        
+        
+.sidebar li {        
+  margin-bottom: 6px;        
+}        
+        
+.sidebar li a {        
+  display: flex;        
+  align-items: center;        
+  gap: 12px;        
+  padding: 12px 16px;        
+  border-radius: 10px;        
+  color: #e5e7eb;        
+  text-decoration: none;        
+  font-size: 14px;        
+}        
+        
+.sidebar li a:hover {        
+  background: #1a1f2b;        
+}        
+        
+.sidebar li a.active {        
+  background: linear-gradient(135deg, #6366f1, #8b5cf6);        
+}        
+        
+.sidebar li a svg {        
+  flex-shrink: 0;        
+  width: 20px;        
+  height: 20px;        
+  color: #e5e7eb;        
+}        
+        
+@media (min-width: 1024px) {        
+  body {        
+    font-size: 16px;        
+  }        
+        
+  .center h1 {        
+    font-size: 22px;        
+  }        
+        
+  .sidebar {        
+    width: 300px;        
+    left: 0;        
+    transform: translateX(-100%);        
+    transition: transform 0.25s ease;        
+  }        
+        
+  .sidebar.active {        
+    transform: translateX(0);        
+  }        
+        
+  .sidebar li a {        
+    font-size: 15px;        
+    padding: 14px 18px;        
+  }        
+} 
