@@ -184,6 +184,7 @@ body {
 .support-note {
   margin-top: 24px;
   opacity: 0.8;
+  color: #4f46e5;
 }
 
 @media (min-width: 1024px) {        
