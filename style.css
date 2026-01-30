@@ -346,15 +346,23 @@ button {
 .youtube-input {
   display: flex;
   align-items: center;
-  gap: 8px; 
+  width: 100%;      
+  gap: 8px;         
 }
 
 .youtube-input input {
-  flex: 1; 
+  flex: 1;        
+  min-width: 0;      
 }
 
 .youtube-input button {
-  flex: 0 0 auto; 
+  flex: 0 0 auto;   
+  width: 40px;      
+  height: 40px;       
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0;
 }
   
 @media (min-width: 1024px) {  
