@@ -135,3 +135,31 @@ mainUploadBtn.addEventListener('click', () => {
   fileInput.dataset.uploadType = 'full';         
   fileInput.click();        
 });  
+
+const youtubeInput = document.getElementById("youtube-url");
+const youtubeSend = document.getElementById("youtube-send");
+
+youtubeSend.addEventListener("click", () => {
+  const url = youtubeInput.value.trim();
+  if(url) {
+    console.log("Ссылка для отправки:", url);
+  } else {
+    alert("Введите ссылку YouTube!");
+  }
+});
+
+const youtubeInput = document.getElementById('youtube-url');
+
+const placeholders = [
+  "YouTube",
+  "VK Видео",
+  "Rutube",
+  "Twitch"
+];
+
+let index = 0;
+
+setInterval(() => {
+  youtubeInput.placeholder = `Введите ссылку ${placeholders[index]}`;
+  index = (index + 1) % placeholders.length;
+}, 1000);
