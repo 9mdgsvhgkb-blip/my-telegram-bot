@@ -342,6 +342,20 @@ button {
   transform: scale(1);  
   opacity: 1;  
 }  
+
+.youtube-input {
+  display: flex;
+  align-items: center;
+  gap: 8px; 
+}
+
+.youtube-input input {
+  flex: 1; 
+}
+
+.youtube-input button {
+  flex: 0 0 auto; 
+}
   
 @media (min-width: 1024px) {  
   body {  
