@@ -210,7 +210,7 @@ button {
 .floating-buttons {  
   display: flex;  
   gap: 40px;  
-  margin-top: 20px;  
+  margin-top: 15px;  
 }  
   
 .icon-btn {  
