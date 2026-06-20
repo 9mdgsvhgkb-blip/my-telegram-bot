@@ -1,0 +1,219 @@
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+body {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    max-width: 430px;
+    margin: 0 auto;
+    background: #000;
+    color: #fff;
+    overflow-x: hidden;
+}
+
+/* Top bars */
+.status-bar {
+    background: #000;
+    color: #0f0;
+    padding: 8px 20px;
+    display: flex;
+    justify-content: space-between;
+    font-size: 15px;
+    height: 44px;
+    align-items: center;
+}
+
+.browser-bar {
+    background: #1c1c1e;
+    padding: 8px 15px;
+}
+
+.browser-content {
+    background: #2c2c2e;
+    border-radius: 30px;
+    display: flex;
+    align-items: center;
+    padding: 6px 12px;
+    font-size: 15px;
+}
+
+.menu-icon, .refresh { color: #aaa; font-size: 20px; }
+.url-bar { flex: 1; text-align: center; color: #ccc; }
+
+/* Header */
+header {
+    background: #111;
+    padding: 15px 20px;
+}
+
+.header-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo img { height: 58px; }
+
+.phones {
+    text-align: right;
+    line-height: 1.35;
+    font-size: 15.5px;
+}
+
+.phones a { color: white; text-decoration: none; }
+
+.menu-button {
+    background: #4a7043;
+    width: 42px;
+    height: 42px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 26px;
+}
+
+/* Hero */
+.hero {
+    height: 520px;
+    background: url('/home/workdir/attachments/IMG_5900.jpg') center/cover no-repeat;
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+.hero-overlay {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(rgba(0,0,0,0.25), rgba(0,0,0,0.75));
+}
+
+.hero-content {
+    position: relative;
+    z-index: 2;
+    padding: 0 25px;
+    text-align: center;
+}
+
+.hero h1 {
+    font-size: 42px;
+    line-height: 1.05;
+    font-weight: 900;
+    text-transform: uppercase;
+    margin-bottom: 22px;
+}
+
+.orange { color: #ff8c42; }
+
+.subtitle {
+    font-size: 18px;
+    line-height: 1.4;
+    margin-bottom: 35px;
+}
+
+.consult-btn {
+    background: linear-gradient(#8fbc8f, #6b9b6b);
+    color: white;
+    border: none;
+    padding: 18px 0;
+    font-size: 18px;
+    font-weight: 600;
+    width: 100%;
+    max-width: 340px;
+    border-radius: 50px;
+    cursor: pointer;
+}
+
+/* Form */
+.form-section {
+    background: white;
+    color: #222;
+    margin-top: -45px;
+    border-radius: 35px 35px 0 0;
+    padding: 35px 25px 50px;
+    position: relative;
+}
+
+.form-container h2 {
+    font-size: 31px;
+    line-height: 1.1;
+    font-weight: 800;
+    text-align: center;
+    margin-bottom: 30px;
+    color: #1a472a;
+}
+
+.input-field {
+    width: 100%;
+    padding: 17px 20px;
+    border: none;
+    background: #f1f1f1;
+    border-radius: 50px;
+    font-size: 17px;
+    margin-bottom: 14px;
+}
+
+.phone-group {
+    display: flex;
+    background: #f1f1f1;
+    border-radius: 50px;
+    align-items: center;
+    padding: 4px;
+}
+
+.country {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    padding-left: 18px;
+    font-size: 16px;
+}
+
+.flag { font-size: 24px; }
+
+.phone-input {
+    flex: 1;
+    border: none;
+    background: transparent;
+    font-size: 17px;
+    padding: 14px 10px;
+}
+
+.send-btn {
+    background: #ff7a3d;
+    color: white;
+    border: none;
+    padding: 14px 26px;
+    border-radius: 50px;
+    font-weight: 600;
+    margin-right: 4px;
+}
+
+.chat-circle {
+    position: absolute;
+    right: 25px;
+    bottom: 70px;
+    width: 62px;
+    height: 62px;
+    background: #ff7a3d;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 34px;
+    box-shadow: 0 6px 20px rgba(255,122,61,0.4);
+}
+
+/* Bottom navigation */
+.bottom-nav {
+    position: fixed;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100%;
+    max-width: 430px;
+    background: #111;
+    display: flex;
+    justify-content: space-around;
+    padding: 10px 0;
+    font-size: 24px;
+    border-top: 1px solid #333;
+}
