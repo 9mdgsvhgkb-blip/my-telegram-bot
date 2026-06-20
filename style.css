@@ -1,4 +1,8 @@
-* { margin: 0; padding: 0; box-sizing: border-box; }
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
 
 body {
     font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
@@ -35,8 +39,16 @@ body {
     font-size: 15px;
 }
 
-.menu-icon, .refresh { color: #aaa; font-size: 20px; }
-.url-bar { flex: 1; text-align: center; color: #ccc; }
+.menu-icon, .refresh { 
+    color: #aaa; 
+    font-size: 20px; 
+}
+
+.url-bar { 
+    flex: 1; 
+    text-align: center; 
+    color: #ccc; 
+}
 
 /* Header */
 header {
@@ -50,7 +62,9 @@ header {
     align-items: center;
 }
 
-.logo img { height: 58px; }
+.logo img { 
+    height: 58px; 
+}
 
 .phones {
     text-align: right;
@@ -58,7 +72,10 @@ header {
     font-size: 15.5px;
 }
 
-.phones a { color: white; text-decoration: none; }
+.phones a { 
+    color: white; 
+    text-decoration: none; 
+}
 
 .menu-button {
     background: #4a7043;
@@ -74,7 +91,7 @@ header {
 /* Hero */
 .hero {
     height: 520px;
-    background: url('/home/workdir/attachments/IMG_5900.jpg') center/cover no-repeat;
+    background: url('IMG_5900.jpg') center/cover no-repeat;
     position: relative;
     display: flex;
     align-items: center;
@@ -83,7 +100,7 @@ header {
 .hero-overlay {
     position: absolute;
     inset: 0;
-    background: linear-gradient(rgba(0,0,0,0.25), rgba(0,0,0,0.75));
+    background: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.8));
 }
 
 .hero-content {
@@ -101,7 +118,9 @@ header {
     margin-bottom: 22px;
 }
 
-.orange { color: #ff8c42; }
+.orange { 
+    color: #ff8c42; 
+}
 
 .subtitle {
     font-size: 18px;
@@ -128,7 +147,7 @@ header {
     color: #222;
     margin-top: -45px;
     border-radius: 35px 35px 0 0;
-    padding: 35px 25px 50px;
+    padding: 35px 25px 70px;
     position: relative;
 }
 
@@ -167,7 +186,9 @@ header {
     font-size: 16px;
 }
 
-.flag { font-size: 24px; }
+.flag { 
+    font-size: 24px; 
+}
 
 .phone-input {
     flex: 1;
