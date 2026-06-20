@@ -62,8 +62,7 @@ rgba(0,0,0,.65),
 rgba(0,0,0,.65)
 ),
 url("demontazh.jpg");
-
-background-size:cover;
+background-size: 80% auto;
 background-position:center;
 
 }
