@@ -144,6 +144,15 @@ margin:0;
     transition: all 0.9s cubic-bezier(.2,.8,.2,1);
 }
 
+.big-title.show{
+    opacity: 1;
+    transform: translateX(0);
+}
+
+.city.show{
+    opacity: 1;
+    transform: translateX(0);
+}
 
 h1 span{
 color:#ff805d;
