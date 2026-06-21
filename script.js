@@ -13,3 +13,42 @@ if (form) {
 
     observer.observe(form);
 }
+
+const phoneInput = document.querySelector('.phone');
+
+phoneInput.value = '+7 ';
+
+phoneInput.addEventListener('focus', () => {
+    if (phoneInput.value.length < 3) {
+        phoneInput.value = '+7 ';
+    }
+});
+
+phoneInput.addEventListener('input', (e) => {
+    let value = phoneInput.value.replace(/\D/g, '');
+
+    // всегда начинаем с 7
+    if (!value.startsWith('7')) {
+        value = '7' + value;
+    }
+
+    let formatted = '+7 ';
+
+    if (value.length > 1) {
+        formatted += '(' + value.substring(1, 4);
+    }
+    if (value.length >= 4) {
+        formatted += ') ';
+        formatted += value.substring(4, 7);
+    }
+    if (value.length >= 7) {
+        formatted += '-';
+        formatted += value.substring(7, 9);
+    }
+    if (value.length >= 9) {
+        formatted += '-';
+        formatted += value.substring(9, 11);
+    }
+
+    phoneInput.value = formatted;
+});
