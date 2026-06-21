@@ -220,9 +220,26 @@ margin:80px auto;
 border-radius:60px;
 
 padding: 50px 60px;
-
+animation: formUp 0.9s ease-out forwards;
+opacity: 0;
+transform: translateY(60px);
 }
 
+@keyframes formUp{
+    0%{
+        opacity: 0;
+        transform: translateY(80px);
+    }
+
+    70%{
+        transform: translateY(-10px);
+    }
+
+    100%{
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
 
 .form h2{
 
@@ -381,7 +398,7 @@ input{
 }
 
 .privacy{
-    margin-top:15px;
+    margin-top:20px;
     font-size:12px;
     color:#777;
     line-height:1.4;
@@ -397,7 +414,7 @@ input{
 
 
 .send-btn{
-    margin-top:20px;
+    margin-top:30px;
 
     width:80%;
     height:55px;
