@@ -374,5 +374,34 @@ input{
     font-size:18px;
     padding-left:23px;
 }
+
+.privacy{
+    margin-top:20px;
+    font-size:14px;
+    color:#777;
+    line-height:1.4;
+}
+
+
+.privacy a{
+    color:#566d20;
+    text-decoration:underline;
+}
+
+
+.send-btn{
+    margin-top:30px;
+
+    width:70%;
+    height:75px;
+
+    background:#6b961f;
+    border:0;
+    border-radius:80px;
+
+    color:white;
+    font-size:20px;
+    font-weight:700;
+}
     
 }
