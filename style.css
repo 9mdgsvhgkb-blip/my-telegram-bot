@@ -275,6 +275,44 @@ input{
     padding-left:40px;
 }
 
+#toast{
+    position:fixed;
+    top:30px;
+    right:30px;
+
+    background:#ff805d;
+    color:white;
+
+    padding:18px 25px;
+    border-radius:15px;
+
+    font-size:16px;
+    font-weight:600;
+
+    opacity:0;
+    visibility:hidden;
+
+    transform:translateY(-20px);
+
+    transition:.3s;
+
+    z-index:9999;
+}
+
+#toast.show{
+    opacity:1;
+    visibility:visible;
+    transform:translateY(0);
+}
+
+#toast.success{
+    background:#6b961f;
+}
+
+#toast.error{
+    background:#ff805d;
+}
+
 @media(max-width:700px){
 
 header{
