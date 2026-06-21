@@ -16,6 +16,32 @@ if (form) {
 
 const phoneInput = document.querySelector('.phone');
 
+phoneInput.addEventListener('keydown', (e) => {
+    if (e.key !== 'Backspace') return;
+
+    const pos = phoneInput.selectionStart;
+    const value = phoneInput.value;
+
+    // если слева от курсора символ маски
+    if ([')', '-', ' '].includes(value[pos - 1])) {
+        e.preventDefault();
+
+        let digits = value.replace(/\D/g, '');
+
+        // сколько цифр находится слева от курсора
+        let digitIndex = value
+            .slice(0, pos)
+            .replace(/\D/g, '').length;
+
+        // удаляем предыдущую цифру
+        digits =
+            digits.slice(0, digitIndex - 1) +
+            digits.slice(digitIndex);
+
+        phoneInput.value = formatNumber(digits);
+    }
+});
+
 function formatNumber(value) {
     let formatted = '+7 ';
 
