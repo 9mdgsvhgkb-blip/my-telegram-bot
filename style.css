@@ -140,7 +140,7 @@ font-size:30px;
 background:white;
 color:#566d20;
 
-width:50%;
+width:40%;
 margin:80px auto;
 border-radius:60px;
 
@@ -163,8 +163,8 @@ color:#ff805d;
 
 
 input{
-    width:85%;
-    height:70px;
+    width:75%;
+    height:60px;
 
     border-radius:45px;
     border:0;
@@ -173,14 +173,14 @@ input{
 
     margin-top:35px;
 
-    font-size:25px;
+    font-size:20px;
     padding-left:40px;
 }
 
 
 .phone{
-    width:85%;
-    height:70px;
+    width:75%;
+    height:60px;
 
     border-radius:45px;
     background:#ddd;
@@ -190,7 +190,7 @@ input{
     display:flex;
     align-items:center;
 
-    font-size:25px;
+    font-size:20px;
     padding-left:40px;
 }
 
