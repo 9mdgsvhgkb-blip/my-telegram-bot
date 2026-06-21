@@ -56,7 +56,6 @@ margin-right: 25px;
     justify-content:center;
     align-items:center;
     gap:5px;
-    cursor: pointer;
 }
 
 
@@ -334,14 +333,14 @@ font-size:15px;
 }
 
 .menu{
-    width:50px;
-    height:50px;
-    gap:5px;
+    width:45px;
+    height:45px;
+    gap:4px;
 }
 
 .menu span{
-    width:25px;
-    height:3px;
+    width:20px;
+    height:2px;
 }
 
 .content{
