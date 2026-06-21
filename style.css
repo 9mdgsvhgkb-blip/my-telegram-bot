@@ -162,22 +162,36 @@ color:#ff805d;
 }
 
 
-input,
+input{
+    width:70%;
+    height:70px;
+
+    border-radius:45px;
+    border:0;
+
+    background:#ddd;
+
+    margin-top:35px;
+
+    font-size:25px;
+    padding-left:40px;
+}
+
+
 .phone{
+    width:70%;
+    height:70px;
 
-width:70%;
-height:70px;
+    border-radius:45px;
+    background:#ddd;
 
-border-radius:50px;
-border:0;
+    margin:35px auto 0;
 
-background:#ddd;
+    display:flex;
+    align-items:center;
 
-margin-top:35px;
-
-font-size:25px;
-padding-left:40px;
-
+    font-size:25px;
+    padding-left:40px;
 }
 
 @media(max-width:700px){
