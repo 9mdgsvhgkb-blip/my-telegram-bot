@@ -138,18 +138,18 @@ font-size:30px;
 background:white;
 color:#566d20;
 
-width:85%;
+width:50%;
 margin:80px auto;
 border-radius:60px;
 
-padding:70px 50px;
+padding: 50px 60px;
 
 }
 
 
 .form h2{
 
-font-size:55px;
+font-size:30px;
 font-weight:900;
 
 }
@@ -163,8 +163,8 @@ color:#ff805d;
 input,
 .phone{
 
-width:90%;
-height:90px;
+width:70%;
+height:70px;
 
 border-radius:50px;
 border:0;
@@ -173,7 +173,7 @@ background:#ddd;
 
 margin-top:35px;
 
-font-size:35px;
+font-size:25px;
 padding-left:40px;
 
 }
