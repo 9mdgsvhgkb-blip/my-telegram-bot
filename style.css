@@ -257,21 +257,36 @@ padding: 30px 1px;
 
 }
 
-input,
+input{
+    width:70%;
+    height:50px;
+
+    border-radius:45px;
+    border:0;
+
+    background:#ddd;
+
+    margin-top:15px;
+
+    font-size:18px;
+    padding-left:23px;
+}
+
+
 .phone{
-width: 80%;
-height:55px;
+    width:70%;
+    height:50px;
 
-border-radius:45px;
-border:0;
+    border-radius:45px;
+    background:#ddd;
 
-background:#ddd;
+    margin:35px auto 0;
 
-margin-top:15px;
+    display:flex;
+    align-items:center;
 
-font-size:18px;
-padding-left:23px;
-
+    font-size:18px;
+    padding-left:23px;
 }
     
 }
