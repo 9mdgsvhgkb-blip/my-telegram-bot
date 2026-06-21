@@ -131,11 +131,17 @@ margin:0;
     font-size:100px;
     font-weight:900;
     color: white;
+    opacity: 0;
+    transform: translateX(120px);
+    transition: all 0.9s cubic-bezier(.2,.8,.2,1);
 }
 
 .city{
     color:#ff805d;
     font-size:75px;
+    opacity: 0;
+    transform: translateX(-120px);
+    transition: all 0.9s cubic-bezier(.2,.8,.2,1);
 }
 
 
@@ -274,21 +280,6 @@ input{
 
     font-size:20px;
     padding-left:40px;
-}
-
-.big-title,
-.city{
-    opacity: 0;
-    transform: translateY(25px) scale(0.95);
-    filter: blur(8px);
-    transition: all 0.9s cubic-bezier(.2,.8,.2,1);
-}
-
-.big-title.show,
-.city.show{
-    opacity: 1;
-    transform: translateY(0) scale(1);
-    filter: blur(0);
 }
 
 @media(max-width:700px){
