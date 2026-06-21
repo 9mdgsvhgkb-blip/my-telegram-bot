@@ -221,9 +221,13 @@ font-size:28px;
 }
 
   .big-title{
-    font-size:43px;
+    font-size:45px;
     font-weight:900;
     color: white;
 }  
 
+ .city{
+    color:#ff805d;
+    font-size:40px;   
+ }
 }
