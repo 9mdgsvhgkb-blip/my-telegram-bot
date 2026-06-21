@@ -243,4 +243,18 @@ font-size:28px;
     color:#ff805d;
     font-size:27px;   
  }
+
+.form{
+
+background:white;
+color:#566d20;
+
+width:50%;
+margin:80px auto;
+border-radius:60px;
+
+padding: 50px 60px;
+
+}
+    
 }
