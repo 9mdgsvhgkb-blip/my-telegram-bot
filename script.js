@@ -25,7 +25,7 @@ phoneInput.addEventListener('focus', () => {
 phoneInput.addEventListener('input', () => {
     let value = phoneInput.value.replace(/\D/g, '');
 
-    if (value.length <= 1) {
+    if (value.length === 0) {
         phoneInput.value = '';
         return;
     }
@@ -56,7 +56,7 @@ phoneInput.addEventListener('input', () => {
 });
 
 phoneInput.addEventListener('blur', () => {
-    if (phoneInput.value === '+7 ' || phoneInput.value === '') {
+    if (phoneInput.value === '+7 ' || phoneInput.value === '+7') {
         phoneInput.value = '';
     }
 });
