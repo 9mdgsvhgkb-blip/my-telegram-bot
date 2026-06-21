@@ -230,7 +230,7 @@ width: 80%;
 }
 
 .form h2{
-font-size:24px;
+font-size:20px;
 }
 
   .big-title{
@@ -260,18 +260,17 @@ padding: 15px 1px;
 input,
 .phone{
 
-width:70%;
-height:70px;
+height:50px;
 
 border-radius:50px;
 border:0;
 
 background:#ddd;
 
-margin-top:35px;
+margin-top:15px;
 
 font-size:15px;
-padding-left:40px;
+padding-left:23px;
 
 }
     
