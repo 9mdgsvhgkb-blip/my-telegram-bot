@@ -220,25 +220,14 @@ margin:80px auto;
 border-radius:60px;
 
 padding: 50px 60px;
-animation: formUp 0.9s ease-out forwards;
 opacity: 0;
 transform: translateY(60px);
+transition: all 0.8s ease-out;
 }
 
-@keyframes formUp{
-    0%{
-        opacity: 0;
-        transform: translateY(80px);
-    }
-
-    70%{
-        transform: translateY(-10px);
-    }
-
-    100%{
-        opacity: 1;
-        transform: translateY(0);
-    }
+.form.show{
+    opacity: 1;
+    transform: translateY(0);
 }
 
 .form h2{
