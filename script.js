@@ -22,9 +22,16 @@ phoneInput.addEventListener('focus', () => {
     }
 });
 
-phoneInput.addEventListener('input', (e) => {
+phoneInput.addEventListener('input', () => {
     let value = phoneInput.value.replace(/\D/g, '');
 
+    // если пользователь всё удалил → полностью очищаем
+    if (value.length === 0) {
+        phoneInput.value = '';
+        return;
+    }
+
+    // всегда держим 7 в начале
     if (!value.startsWith('7')) {
         value = '7' + value;
     }
@@ -48,4 +55,11 @@ phoneInput.addEventListener('input', (e) => {
     }
 
     phoneInput.value = formatted;
+});
+
+// если ушёл и там только +7 → очищаем
+phoneInput.addEventListener('blur', () => {
+    if (phoneInput.value === '+7 ' || phoneInput.value === '+7') {
+        phoneInput.value = '';
+    }
 });
