@@ -54,7 +54,6 @@ font-size:40px;
 .menu span{
     display:block;
     line-height:1;
-    transform:translateY(-5px);
 }
 
 .hero{
