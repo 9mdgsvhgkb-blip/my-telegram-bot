@@ -51,6 +51,11 @@ justify-content:center;
 font-size:60px;
 }
 
+.menu span{
+    display:block;
+    line-height:1;
+    transform:translateY(-5px);
+}
 
 .hero{
 
