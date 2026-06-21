@@ -22,8 +22,13 @@ phoneInput.addEventListener('focus', () => {
     }
 });
 
-phoneInput.addEventListener('input', (e) => {
+phoneInput.addEventListener('input', () => {
     let value = phoneInput.value.replace(/\D/g, '');
+
+    if (value.length <= 1) {
+        phoneInput.value = '';
+        return;
+    }
 
     if (!value.startsWith('7')) {
         value = '7' + value;
@@ -48,4 +53,10 @@ phoneInput.addEventListener('input', (e) => {
     }
 
     phoneInput.value = formatted;
+});
+
+phoneInput.addEventListener('blur', () => {
+    if (phoneInput.value === '+7 ' || phoneInput.value === '') {
+        phoneInput.value = '';
+    }
 });
