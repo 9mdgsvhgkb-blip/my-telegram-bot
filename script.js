@@ -16,10 +16,8 @@ if (form) {
 
 const phoneInput = document.querySelector('.phone');
 
-phoneInput.value = '+7 ';
-
 phoneInput.addEventListener('focus', () => {
-    if (phoneInput.value.length < 3) {
+    if (phoneInput.value === '') {
         phoneInput.value = '+7 ';
     }
 });
@@ -27,7 +25,6 @@ phoneInput.addEventListener('focus', () => {
 phoneInput.addEventListener('input', (e) => {
     let value = phoneInput.value.replace(/\D/g, '');
 
-    // всегда начинаем с 7
     if (!value.startsWith('7')) {
         value = '7' + value;
     }
