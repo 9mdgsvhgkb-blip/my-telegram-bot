@@ -256,5 +256,23 @@ border-radius:60px;
 padding: 30px 40px;
 
 }
+
+input,
+.phone{
+
+width:70%;
+height:70px;
+
+border-radius:50px;
+border:0;
+
+background:#ddd;
+
+margin-top:35px;
+
+font-size:15px;
+padding-left:40px;
+
+}
     
 }
