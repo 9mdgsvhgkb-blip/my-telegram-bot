@@ -1,3 +1,18 @@
+function showToast(message, type = 'error') {
+    const toast = document.getElementById('toast');
+
+    toast.textContent = message;
+    toast.className = '';
+    toast.classList.add(type);
+    toast.classList.add('show');
+
+    clearTimeout(toast.timer);
+
+    toast.timer = setTimeout(() => {
+        toast.classList.remove('show');
+    }, 3000);
+}
+
 const form = document.querySelector('.form');
 
 if (form) {
@@ -82,3 +97,4 @@ phoneInput.addEventListener('focus', () => {
         phoneInput.value = '+7 ';
     }
 });
+
