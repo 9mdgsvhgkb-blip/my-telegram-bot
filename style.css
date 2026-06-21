@@ -90,6 +90,12 @@ margin:0;
 
 }
 
+.big-title{
+    font-size:110px;
+    font-weight:900;
+    color: white;
+}
+
 
 h1 span{
 color:#ff805d;
