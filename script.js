@@ -103,6 +103,11 @@ const sendBtn = document.querySelector('.send-btn');
 sendBtn.addEventListener('click', () => {
     const digits = phoneInput.value.replace(/\D/g, '');
 
+    if (digits.length <= 1) {
+        showToast('Введите номер телефона');
+        return;
+    }
+
     if (!/^7\d{10}$/.test(digits)) {
         showToast('Введите корректный номер телефона');
         return;
@@ -110,4 +115,3 @@ sendBtn.addEventListener('click', () => {
 
     showToast('Заявка отправлена!', 'success');
 });
-
