@@ -9,6 +9,10 @@ background:#111;
 color:white;
 }
 
+.send-btn::before{
+    animation:none;
+}
+
 
 header{
 height:100px;
