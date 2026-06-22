@@ -890,4 +890,10 @@ input{
     line-height: 1.29;
 }
 
+.quiz-back svg{
+    width:24px;
+    height:24px;
+    transform: translate(6px, 14px);
+}
+
 }
