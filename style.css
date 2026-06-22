@@ -510,6 +510,9 @@ input{
     height:500px;
     padding-top: 50px;
     margin:0 auto 35px;
+    user-select:none;
+    -webkit-user-drag:none;
+    -webkit-touch-callout:none;
 }
 
 .quiz h2{
