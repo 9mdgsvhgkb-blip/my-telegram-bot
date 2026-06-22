@@ -382,6 +382,11 @@ input{
     color:#bbb;
 }
 
+.adv-text{
+    display:flex;
+    flex-direction:column;
+}
+
 @media(max-width:700px){
 
 header{
