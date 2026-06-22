@@ -353,6 +353,7 @@ input{
     opacity:0;
     transform:translateY(50px);
     transition:all .8s ease;
+    align-items:center;
 }
 
 .adv-card.show{
