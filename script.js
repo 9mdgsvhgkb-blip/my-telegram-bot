@@ -164,5 +164,31 @@ quizOptions.forEach(option => {
             currentStep.textContent = Math.min(current + 1, 4);
         }
 
+        updateBackButton();
+
     });
 });
+
+const backBtn = document.querySelector('.quiz-back');
+
+backBtn.addEventListener('click', () => {
+
+    if (current === 0) return;
+
+    quizSteps[current].classList.remove('active');
+
+    current--;
+
+    quizSteps[current].classList.add('active');
+
+    currentStep.textContent = current + 1;
+
+    updateBackButton();
+
+});
+
+function updateBackButton() {
+    backBtn.style.display = current === 0 ? 'none' : 'flex';
+}
+
+updateBackButton();
