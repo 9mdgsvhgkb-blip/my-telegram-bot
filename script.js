@@ -192,3 +192,16 @@ function updateBackButton() {
 }
 
 updateBackButton();
+
+const customInput = document.querySelector('.quiz-custom');
+const customNext = document.querySelector('.quiz-custom-next');
+
+customInput.addEventListener('input', () => {
+
+    if (customInput.value.trim()) {
+        customNext.classList.add('show');
+    } else {
+        customNext.classList.remove('show');
+    }
+
+});
