@@ -161,7 +161,7 @@ quizOptions.forEach(option => {
         }
 
         if (currentStep) {
-            currentStep.textContent = Math.min(current + 1, 3);
+            currentStep.textContent = Math.min(current + 1, 4);
         }
 
     });
