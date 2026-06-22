@@ -359,15 +359,13 @@ input{
 }
 
 .adv-icon{
-    width:70px;
-    height:70px;
+    width:100px;
+    height:100px;
     flex-shrink:0;
 
     object-fit:cover;
 
     border-radius:50%;
-    background:#6b961f;
-
     padding:12px;
 }
 
@@ -546,8 +544,8 @@ input{
     }
 
     .adv-icon{
-        width:55px;
-        height:55px;
+        width:80px;
+        height:80px;
         padding:8px;
     }
 
