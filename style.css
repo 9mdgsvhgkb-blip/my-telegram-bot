@@ -663,20 +663,33 @@ input{
     position:absolute;
     top:50%;
     right:10px;
-    transform:translateY(-29%);
 
     width:45px;
     height:45px;
 
+    opacity:0;
+    visibility:hidden;
+
+    transform:translateY(-29%) scale(.8);
+
+    transition:
+        opacity .25s ease,
+        transform .25s ease;
+
     border:none;
     border-radius:30%;
-
     background:#1f1f1f;
     color:white;
 
     display:flex;
     align-items:center;
     justify-content:center;
+}
+
+.quiz-custom-next.show{
+    opacity:1;
+    visibility:visible;
+    transform:translateY(-29%) scale(1);
 }
 
 .quiz-custom-next::before{
