@@ -530,6 +530,7 @@ input{
 
     .advantages{
         padding:40px 15px;
+        background: red;
     }
 
     .advantages h2{
