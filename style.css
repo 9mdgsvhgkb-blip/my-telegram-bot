@@ -858,6 +858,7 @@ input{
 .quiz-card{
     padding:25px 15px;
     width: 95%;
+    max-width:95%;
 }
 
 .quiz-step h3{
