@@ -632,8 +632,6 @@ input{
     font-weight:700;
 
     cursor:pointer;
-    justify-content: center;
-    line-height: 1.76;
     
     margin-bottom: -35px;
 }
@@ -875,6 +873,12 @@ input{
 .quiz-custom{
     height:50px;
     font-size:16px;
+}
+
+.quiz-back{
+    width: 40px;
+    height: 40px;
+    line-height: 1.29;
 }
 
 }
