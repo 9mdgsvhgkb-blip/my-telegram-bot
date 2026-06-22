@@ -663,15 +663,15 @@ input{
     position:absolute;
     top:50%;
     right:10px;
-    transform:translateY(-50%);
+    transform:translateY(-29%);
 
     width:45px;
     height:45px;
 
     border:none;
-    border-radius:50%;
+    border-radius:30%;
 
-    background:#6b961f;
+    background:#1f1f1f;
     color:white;
 
     display:flex;
