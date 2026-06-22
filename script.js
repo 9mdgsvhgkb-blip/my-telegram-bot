@@ -142,3 +142,27 @@ sendBtn.addEventListener('click', () => {
 const track = document.querySelector('.works-track');
 
 track.innerHTML += track.innerHTML;
+
+const quizSteps = document.querySelectorAll('.quiz-step');
+const quizOptions = document.querySelectorAll('.quiz-option');
+const currentStep = document.getElementById('current-step');
+
+let current = 0;
+
+quizOptions.forEach(option => {
+    option.addEventListener('click', () => {
+
+        quizSteps[current].classList.remove('active');
+
+        current++;
+
+        if (current < quizSteps.length) {
+            quizSteps[current].classList.add('active');
+        }
+
+        if (currentStep) {
+            currentStep.textContent = Math.min(current + 1, 3);
+        }
+
+    });
+});
