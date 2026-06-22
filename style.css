@@ -812,7 +812,7 @@ input{
     .quiz-image{
     width:80%;
     height:80%;
-    margin-top; -80px;
+    margin-top: -80px;
 }
 
 .quiz h2{
@@ -825,6 +825,7 @@ input{
 
 .quiz-card{
     padding:25px 15px;
+    width: 90%;
 }
 
 .quiz-step h3{
