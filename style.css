@@ -446,6 +446,24 @@ input{
 .works-slider{
     display:flex;
     gap:25px;
+    overflow:hidden;
+}
+
+.works-track{
+    display:flex;
+    gap:25px;
+    width:max-content;
+    animation:scrollWorks 40s linear infinite;
+}
+
+@keyframes scrollWorks{
+    from{
+        transform:translateX(0);
+    }
+
+    to{
+        transform:translateX(-50%);
+    }
 }
 
 .work-card{
