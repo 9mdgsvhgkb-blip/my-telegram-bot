@@ -29,6 +29,29 @@ if (form) {
     observer.observe(form);
 }
 
+const cards = document.querySelectorAll('.adv-card');
+
+const cardsObserver = new IntersectionObserver((entries) => {
+    entries.forEach((entry, index) => {
+
+        if (entry.isIntersecting) {
+
+            setTimeout(() => {
+                entry.target.classList.add('show');
+            }, index * 200);
+
+            cardsObserver.unobserve(entry.target);
+        }
+
+    });
+}, {
+    threshold: 0.2
+});
+
+cards.forEach(card => {
+    cardsObserver.observe(card);
+});
+
 const phoneInput = document.querySelector('.phone');
 
 phoneInput.addEventListener('keydown', (e) => {
