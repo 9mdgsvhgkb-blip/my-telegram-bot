@@ -653,6 +653,41 @@ input{
     transform: translate(6px, 11px);
 }
 
+.quiz-custom-wrap{
+    position:relative;
+    max-width:500px;
+    margin:20px auto 0;
+}
+
+.quiz-custom-next{
+    position:absolute;
+    top:50%;
+    right:10px;
+    transform:translateY(-50%);
+
+    width:45px;
+    height:45px;
+
+    border:none;
+    border-radius:50%;
+
+    background:#6b961f;
+    color:white;
+
+    display:flex;
+    align-items:center;
+    justify-content:center;
+}
+
+.quiz-custom-next::before{
+    display:none;
+}
+
+.quiz-custom-next svg{
+    width:20px;
+    height:20px;
+}
+
 @media(max-width:700px){
 
 header{
