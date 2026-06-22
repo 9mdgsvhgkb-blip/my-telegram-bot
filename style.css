@@ -670,11 +670,9 @@ input{
     opacity:0;
     visibility:hidden;
 
-    transform:translateY(-29%) scale(.8);
-
-    transition:
-        opacity .25s ease,
-        transform .25s ease;
+    transform:translateY(-29%);
+    
+    transition:opacity .25s ease;
 
     border:none;
     border-radius:30%;
@@ -948,6 +946,11 @@ input{
     transform: translateY(-23%);
     width: 35px;
     height: 35px;
+    transform:translateY(-23%) scale(.8);
 }
+
+    .quiz-custom-next.show{
+        transform:translateY(-23%);
+    }
 
 }
