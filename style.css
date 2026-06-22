@@ -562,7 +562,7 @@ input{
     }
     
     .hero{
-    min-height:885px;
+    min-height:auto;
     }
     
 }
