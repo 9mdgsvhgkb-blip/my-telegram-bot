@@ -618,6 +618,32 @@ input{
     transform:scale(.98);
 }
 
+.quiz-back{
+    width:50px;
+    height:50px;
+
+    border:none;
+    border-radius:50%;
+
+    background:#f3f3f3;
+    color:#111;
+
+    font-size:24px;
+    font-weight:700;
+
+    cursor:pointer;
+
+    margin-bottom:20px;
+}
+
+.quiz-back::before{
+    display:none;
+}
+
+.quiz-back:active{
+    transform:scale(.95);
+}
+
 @media(max-width:700px){
 
 header{
