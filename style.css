@@ -443,6 +443,30 @@ input{
     flex-shrink:0;
 }
 
+.works-slider{
+    display:flex;
+    gap:25px;
+}
+
+.work-card{
+    flex-shrink:0;
+
+    border-radius:25px;
+    overflow:hidden;
+
+    border:4px solid #202020;
+
+    box-shadow:0 15px 35px rgba(0,0,0,.4);
+}
+
+.work-card img{
+    width:350px;
+    height:250px;
+
+    object-fit:cover;
+    display:block;
+}
+
 @media(max-width:700px){
 
 header{
