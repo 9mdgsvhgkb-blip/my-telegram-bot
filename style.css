@@ -397,7 +397,10 @@ input{
 }
 
 .works{
-    background:#1e1e1e;
+    background:url("demontazh2.jpg");
+    background-size:cover;
+    background-position:center;
+
     padding:80px 20px;
     overflow:hidden;
 }
