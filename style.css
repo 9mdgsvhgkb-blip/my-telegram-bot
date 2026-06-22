@@ -931,4 +931,10 @@ input{
     transform: translate(2.7px, 7px);
 }
 
+.quiz-custom-next{
+    transform: translateY(-23%);
+    width: 35px
+    height: 35px;
+}
+
 }
