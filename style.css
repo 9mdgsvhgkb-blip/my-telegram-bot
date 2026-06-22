@@ -812,6 +812,7 @@ input{
     .quiz-image{
     width:80%;
     height:80%;
+    margin-top; -80px;
 }
 
 .quiz h2{
