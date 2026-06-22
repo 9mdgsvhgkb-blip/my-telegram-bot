@@ -563,7 +563,7 @@ input{
     
     .hero{
     min-height:885px;
-    border-bottom:5px solid yellow;
+    overflow:hidden;
     }
     
 }
