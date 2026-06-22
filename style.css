@@ -507,7 +507,7 @@ input{
     display:block;
 
     width:500px;
-    height:5000px;
+    height:500px;
     padding-top: 50px;
     margin:0 auto 35px;
 
@@ -530,7 +530,7 @@ input{
     margin:0 auto 50px;
 
     font-size:20px;
-    color:#bbb;
+    color:#666;
 }
 
 .quiz-card{
@@ -542,6 +542,9 @@ input{
     border-radius:30px;
 
     padding:40px;
+    background:#fafafa;
+    border:1px solid #ececec;
+    box-shadow:0 10px 30px rgba(0,0,0,.06);
 }
 
 .quiz-progress{
