@@ -575,4 +575,22 @@ input{
     overflow:hidden;
     }
     
+        .works{
+        padding:50px 15px;
+    }
+
+    .works h2{
+        font-size:30px;
+    }
+
+    .works-subtitle{
+        font-size:14px;
+        margin:15px auto 30px;
+    }
+
+    .works-slider img{
+        width:280px;
+        height:190px;
+    }
+
 }
