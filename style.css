@@ -350,6 +350,14 @@ input{
     gap:20px;
 
     transition:.3s;
+    opacity:0;
+    transform:translateY(50px);
+    transition:all .8s ease;
+}
+
+.adv-card.show{
+    opacity:1;
+    transform:translateY(0);
 }
 
 .adv-card:hover{
