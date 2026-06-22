@@ -632,6 +632,8 @@ input{
     font-weight:700;
 
     cursor:pointer;
+    justify-content: center;
+    line-height: 1.76;
     
     margin-bottom: -35px;
 }
