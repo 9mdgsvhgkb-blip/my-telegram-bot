@@ -559,4 +559,8 @@ input{
         font-size:14px;
     }
     
+    .hero{
+    min-height:auto;
+    }
+    
 }
