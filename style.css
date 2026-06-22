@@ -347,7 +347,6 @@ input{
     padding:25px;
 
     display:flex;
-    align-items:flex-start;
     gap:20px;
 
     transition:.3s;
@@ -385,6 +384,7 @@ input{
 .adv-text{
     display:flex;
     flex-direction:column;
+    justify-content:center;    
 }
 
 @media(max-width:700px){
