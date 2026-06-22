@@ -139,58 +139,6 @@ sendBtn.addEventListener('click', () => {
     showToast('Заявка отправлена!', 'success');
 });
 
-const slider = document.querySelector('.works-slider');
+const track = document.querySelector('.works-track');
 
-const images = [
-    'work1.jpg',
-    'work2.jpg',
-    'work3.jpg',
-    'work4.jpg',
-    'work5.jpg',
-    'work6.jpg',
-    'work7.jpg',
-    'work8.jpg'
-];
-
-function createCard(src) {
-    const card = document.createElement('div');
-    card.className = 'work-card';
-
-    const img = document.createElement('img');
-    img.src = src;
-
-    card.appendChild(img);
-
-    return card;
-}
-
-// стартовые карточки
-for (let i = 0; i < 12; i++) {
-    const random = images[Math.floor(Math.random() * images.length)];
-    slider.appendChild(createCard(random));
-}
-
-function animate() {
-    const firstCard = slider.firstElementChild;
-
-    firstCard.style.marginLeft = '-2px';
-
-    const current =
-        parseFloat(firstCard.dataset.offset || 0) - 1;
-
-    firstCard.dataset.offset = current;
-    firstCard.style.transform = `translateX(${current}px)`;
-
-    if (Math.abs(current) >= firstCard.offsetWidth + 25) {
-        firstCard.remove();
-
-        const random =
-            images[Math.floor(Math.random() * images.length)];
-
-        slider.appendChild(createCard(random));
-    }
-
-    requestAnimationFrame(animate);
-}
-
-animate();
+track.innerHTML += track.innerHTML;
