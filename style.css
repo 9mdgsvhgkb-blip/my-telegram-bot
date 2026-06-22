@@ -374,6 +374,10 @@ input{
 
     border-radius:50%;
     padding:12px;
+    pointer-events:none;
+    user-select:none;
+    -webkit-user-drag:none;
+    -webkit-touch-callout:none;
 }
 
 .adv-card h3{
