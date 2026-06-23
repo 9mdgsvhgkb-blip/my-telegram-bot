@@ -926,6 +926,7 @@ input{
     
     .works{
         padding:50px 0px;
+        min-height: 520px;
     }
 
     .works h2{
@@ -1003,6 +1004,6 @@ input{
     
     .quiz-phone {
         height: 55px;
-    #
+    }
 
 }
