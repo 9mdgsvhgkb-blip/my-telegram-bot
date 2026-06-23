@@ -605,6 +605,19 @@ input{
 
 .quiz-step.active{
     display:block;
+    animation:stepIn .4s cubic-bezier(.22,1,.36,1);
+}
+
+@keyframes stepIn{
+    from{
+        opacity:0;
+        transform:translateY(20px) scale(.98);
+    }
+
+    to{
+        opacity:1;
+        transform:translateY(0) scale(1);
+    }
 }
 
 .quiz-option::before,
