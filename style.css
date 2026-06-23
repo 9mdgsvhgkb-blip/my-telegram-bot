@@ -526,6 +526,10 @@ input{
     color:#666;
 }
 
+.quiz-custom{
+    padding-right:66px;
+}
+
 .quiz-card{
     max-width:50%;
     margin:0 auto;
@@ -938,6 +942,7 @@ input{
 .quiz-custom{
     height:50px;
     font-size:16px;
+    padding-right: 55px;
 }
 
 .quiz-back{
