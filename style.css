@@ -971,5 +971,9 @@ input{
     .quiz-custom-next.show{
         transform:translateY(-23%);
     }
+    
+    .quiz-phone {
+        height: 55px;
+    #
 
 }
