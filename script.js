@@ -205,3 +205,21 @@ customInput.addEventListener('input', () => {
     }
 
 });
+
+customNext.addEventListener('click', () => {
+
+    if (!customInput.value.trim()) return;
+
+    quizSteps[current].classList.remove('active');
+
+    current++;
+
+    if (current < quizSteps.length) {
+        quizSteps[current].classList.add('active');
+    }
+
+    currentStep.textContent = Math.min(current + 1, 4);
+
+    updateBackButton();
+
+});
