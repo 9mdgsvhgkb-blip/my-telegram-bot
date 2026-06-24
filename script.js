@@ -149,26 +149,6 @@ const currentStep = document.getElementById('current-step');
 
 let current = 0;
 
-quizOptions.forEach(option => {
-    option.addEventListener('click', () => {
-
-        quizSteps[current].classList.remove('active');
-
-        current++;
-
-        if (current < quizSteps.length) {
-            quizSteps[current].classList.add('active');
-        }
-
-        if (currentStep) {
-            currentStep.textContent = Math.min(current + 1, 4);
-        }
-
-        updateBackButton();
-
-    });
-});
-
 const backBtn = document.querySelector('.quiz-back');
 
 backBtn.addEventListener('click', () => {
