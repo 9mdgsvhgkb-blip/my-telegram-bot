@@ -333,7 +333,7 @@ quizPhone.addEventListener('focus', () => {
 
 });
 
-quizSubmit.addEventListener('click', async () => {
+quizSubmit.addEventListener('click', () => {
 
     const phone = document.querySelector('.quiz-phone').value.trim();
 
@@ -346,17 +346,7 @@ quizSubmit.addEventListener('click', async () => {
 
     quizData.phone = phone;
 
-        const result = await response.json();
+    console.log(quizData);
 
-        if(result.success){
-            showToast('Заявка отправлена! Скоро мы перезвоним.', 'success');
-        } else {
-            showToast('Ошибка отправки');
-        }
-
-    } catch(error) {
-        showToast('Ошибка соединения');
-        console.error(error);
-    }
-
+    showToast('Заявка отправлена! Скоро мы перезвоним.', 'success');
 });
