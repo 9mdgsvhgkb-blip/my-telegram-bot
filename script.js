@@ -346,16 +346,6 @@ quizSubmit.addEventListener('click', async () => {
 
     quizData.phone = phone;
 
-    try {
-
-        const response = await fetch('/quiz.php', {
-            method: 'POST',
-            headers: {
-                'Content-Type': 'application/json'
-            },
-            body: JSON.stringify(quizData)
-        });
-
         const result = await response.json();
 
         if(result.success){
