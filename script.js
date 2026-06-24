@@ -283,4 +283,89 @@ quizSubmit.addEventListener('click', () => {
 
 });
 
+quizPhone.addEventListener('keydown', (e) => {
 
+    if (e.key !== 'Backspace') return;
+
+    const pos = quizPhone.selectionStart;
+    const value = quizPhone.value;
+
+    if ([')', '-', ' '].includes(value[pos - 1])) {
+
+        e.preventDefault();
+
+        let digits = value.replace(/\D/g, '');
+
+        let digitIndex = value
+            .slice(0, pos)
+            .replace(/\D/g, '').length;
+
+        digits =
+            digits.slice(0, digitIndex - 1) +
+            digits.slice(digitIndex);
+
+        quizPhone.value = formatNumber(digits);
+    }
+});
+
+quizPhone.addEventListener('input', () => {
+
+    let value = quizPhone.value.replace(/\D/g, '');
+
+    if (value.length === 0) {
+        quizPhone.value = '+7 ';
+        return;
+    }
+
+    if (!value.startsWith('7')) {
+        value = '7' + value;
+    }
+
+    quizPhone.value = formatNumber(value);
+});
+
+quizPhone.addEventListener('focus', () => {
+
+    if (quizPhone.value === '') {
+        quizPhone.value = '+7 ';
+    }
+
+});
+
+quizSubmit.addEventListener('click', async () => {
+
+    const phone = document.querySelector('.quiz-phone').value.trim();
+
+    const digits = phone.replace(/\D/g, '');
+
+    if (!/^7\d{10}$/.test(digits)) {
+        showToast('Введите корректный номер телефона');
+        return;
+    }
+
+    quizData.phone = phone;
+
+    try {
+
+        const response = await fetch('/quiz.php', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify(quizData)
+        });
+
+        const result = await response.json();
+
+        if(result.success){
+            showToast('Заявка отправлена! Скоро мы перезвоним.', 'success');
+        } else {
+            showToast('Ошибка отправки');
+        }
+
+    } catch(error) {
+        showToast('Ошибка соединения');
+        console.error(error);
+    }
+
+});
