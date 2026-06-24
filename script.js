@@ -277,7 +277,7 @@ customNext.addEventListener('click', () => {
 
     if(!customInput.value.trim()) return;
 
-    quizData.objectType = customInput.value.trim();
+    quizData.demolitionType = customInput.value.trim();
 
     quizSteps[current].classList.remove('active');
 
