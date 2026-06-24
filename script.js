@@ -237,8 +237,16 @@ quizOptions.forEach(option => {
         const answer = option.textContent.trim();
 
         if(current === 0){
-            quizData.objectType = answer;
-        }
+
+            const types = {
+                'Квартиру': 'Квартира',
+                'Офис': 'Офис',
+                'Дом': 'Дом',
+                'Коммерческое помещение': 'Коммерческое помещение'
+            };
+
+        quizData.demolitionType = types[answer] || answer;
+    }
 
         if(current === 1){
             quizData.area = answer;
