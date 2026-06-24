@@ -324,9 +324,15 @@ quizPhone.addEventListener('focus', () => {
 
 quizSubmit.addEventListener('click', () => {
 
+    console.log('Кнопка нажата');
+
     const phone = document.querySelector('.quiz-phone').value.trim();
 
+    console.log('Телефон:', phone);
+
     const digits = phone.replace(/\D/g, '');
+
+    console.log('Цифры:', digits);
 
     if (!/^7\d{10}$/.test(digits)) {
         showToast('Введите корректный номер телефона');
@@ -335,7 +341,7 @@ quizSubmit.addEventListener('click', () => {
 
     quizData.phone = phone;
 
-    console.log(quizData);
+    console.log('Данные квиза:', quizData);
 
     showToast('Заявка отправлена! Скоро мы перезвоним.', 'success');
 });
