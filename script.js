@@ -223,3 +223,73 @@ customNext.addEventListener('click', () => {
     updateBackButton();
 
 });
+
+const quizData = {
+    objectType: '',
+    area: '',
+    trashRemoval: '',
+    phone: ''
+};
+
+quizOptions.forEach(option => {
+    option.addEventListener('click', () => {
+
+        const answer = option.textContent.trim();
+
+        if(current === 0){
+            quizData.objectType = answer;
+        }
+
+        if(current === 1){
+            quizData.area = answer;
+        }
+
+        if(current === 2){
+            quizData.trashRemoval = answer;
+        }
+
+        quizSteps[current].classList.remove('active');
+
+        current++;
+
+        if(current < quizSteps.length){
+            quizSteps[current].classList.add('active');
+        }
+
+        currentStep.textContent = Math.min(current + 1, 4);
+
+        updateBackButton();
+    });
+});
+
+customNext.addEventListener('click', () => {
+
+    if(!customInput.value.trim()) return;
+
+    quizData.objectType = customInput.value.trim();
+
+    quizSteps[current].classList.remove('active');
+
+    current++;
+
+    quizSteps[current].classList.add('active');
+
+    currentStep.textContent = current + 1;
+
+    updateBackButton();
+
+});
+
+const quizSubmit = document.querySelector('.quiz-submit');
+
+quizSubmit.addEventListener('click', () => {
+
+    const phone = document.querySelector('.quiz-phone').value.trim();
+
+    quizData.phone = phone;
+
+    console.log(quizData);
+
+});
+
+
