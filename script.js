@@ -272,18 +272,6 @@ customNext.addEventListener('click', () => {
 
 });
 
-const quizSubmit = document.querySelector('.quiz-submit');
-
-quizSubmit.addEventListener('click', () => {
-
-    const phone = document.querySelector('.quiz-phone').value.trim();
-
-    quizData.phone = phone;
-
-    console.log(quizData);
-
-});
-
 quizPhone.addEventListener('keydown', (e) => {
 
     if (e.key !== 'Backspace') return;
