@@ -324,16 +324,18 @@ quizPhone.addEventListener('focus', () => {
 
 quizSubmit.addEventListener('click', () => {
 
-    console.log('КНОПКА РАБОТАЕТ');
+    const phone = document.querySelector('.quiz-phone').value.trim();
 
-    console.log('До телефона:', quizData);
+    const digits = phone.replace(/\D/g, '');
 
-    const phone = quizPhone.value;
-
-    console.log('Телефон:', phone);
+    if (!/^7\d{10}$/.test(digits)) {
+        showToast('Введите корректный номер телефона');
+        return;
+    }
 
     quizData.phone = phone;
 
-    console.log('После телефона:', quizData);
+    console.log(quizData);
 
+    showToast('Заявка отправлена! Скоро мы перезвоним.', 'success');
 });
