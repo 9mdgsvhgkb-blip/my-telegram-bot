@@ -30,6 +30,7 @@ if (form) {
 }
 
 const cards = document.querySelectorAll('.adv-card');
+const quizSubmit = document.querySelector('.quiz-submit');
 
 const cardsObserver = new IntersectionObserver((entries) => {
     entries.forEach((entry, index) => {
