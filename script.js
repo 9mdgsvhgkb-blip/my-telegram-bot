@@ -225,7 +225,7 @@ customNext.addEventListener('click', () => {
 });
 
 const quizData = {
-    objectType: '',
+    demolitionType: '',
     area: '',
     trashRemoval: '',
     phone: ''
