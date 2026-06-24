@@ -146,6 +146,7 @@ track.innerHTML += track.innerHTML;
 const quizSteps = document.querySelectorAll('.quiz-step');
 const quizOptions = document.querySelectorAll('.quiz-option');
 const currentStep = document.getElementById('current-step');
+const quizPhone = document.querySelector('.quiz-phone');
 
 let current = 0;
 
