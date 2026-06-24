@@ -245,7 +245,10 @@ quizOptions.forEach(option => {
         }
 
         if(current === 2){
-            quizData.trashRemoval = answer;
+            quizData.trashRemoval =
+                answer === 'Да'
+                    ? 'С вывозом мусора'
+                    : 'Без вывоза мусора';
         }
 
         quizSteps[current].classList.remove('active');
