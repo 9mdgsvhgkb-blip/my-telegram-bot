@@ -486,6 +486,69 @@ body{
 
 }
 
+/* =========================
+   STEPS
+========================= */
+
+.steps{
+    padding:120px 20px;
+    background:#111;
+}
+
+.steps-container{
+    max-width:900px;
+    margin:0 auto;
+}
+
+.steps-label{
+    color:#c8a56a;
+    font-size:13px;
+    letter-spacing:3px;
+    margin-bottom:20px;
+}
+
+.steps h2{
+    font-size:55px;
+    font-weight:900;
+    text-transform:uppercase;
+    margin-bottom:60px;
+}
+
+.steps-list{
+    display:flex;
+    flex-direction:column;
+}
+
+.step{
+    display:flex;
+    align-items:center;
+    gap:35px;
+
+    padding:30px 0;
+
+    border-bottom:1px solid rgba(255,255,255,.08);
+}
+
+.step-number{
+    font-size:64px;
+    font-weight:900;
+    color:#c8a56a;
+    min-width:110px;
+}
+
+.step-title{
+    font-size:32px;
+    font-weight:700;
+    color:#fff;
+}
+
+.step-arrow{
+    text-align:center;
+    font-size:34px;
+    color:#666;
+    padding:15px 0;
+}
+
 @media(max-width:700px){
 
 .hero{
@@ -621,6 +684,34 @@ body{
 
     font-size:22px;
 
+}
+
+.steps{
+    padding:80px 20px;
+}
+
+.steps h2{
+    font-size:38px;
+    margin-bottom:40px;
+}
+
+.step{
+    gap:20px;
+    padding:22px 0;
+}
+
+.step-number{
+    font-size:42px;
+    min-width:70px;
+}
+
+.step-title{
+    font-size:22px;
+}
+
+.step-arrow{
+    font-size:24px;
+    padding:10px 0;
 }
 
 }
