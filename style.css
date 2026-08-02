@@ -439,14 +439,6 @@ body{
 
     object-fit:cover;
 
-    transition:.5s;
-
-}
-
-.product-card:hover img{
-
-    transform:scale(1.08);
-
 }
 
 .product-card::before{
