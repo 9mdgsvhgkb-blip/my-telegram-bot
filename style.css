@@ -40,7 +40,7 @@ body{
 .hero-container{
     position:relative;
     z-index:2;
-    width:90%;
+    width:100%;
     max-width:1400px;
     display:flex;
     justify-content:center;
@@ -151,27 +151,7 @@ body{
     display:none;
 }
 
-@media(max-width:992px){
-
-.hero h1{
-    font-size:58px;
-}
-
-.hero p{
-    font-size:18px;
-}
-
-.hero-info{
-    gap:35px;
-}
-
-.hero-info strong{
-    font-size:32px;
-}
-
-}
-
-@media(max-width:768px){
+@media(max-width:700px){
 
 .hero{
     padding:40px 20px;
@@ -200,6 +180,10 @@ body{
 
 .hero-label{
     font-size:11px;
+}
+
+.hero-info strong{
+    font-size:32px;
 }
 
 }
