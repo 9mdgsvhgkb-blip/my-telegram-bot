@@ -214,6 +214,10 @@ body{
 @media(max-width:700px){
 
 .hero{
+    background:url("hero-mobile.jpg") center center/cover no-repeat;
+}
+    
+.hero{
     padding:40px 20px;
 }
 
