@@ -218,6 +218,151 @@ body{
     gap:15px;
 }
 
+/* =========================
+   PRODUCTION SECTION
+========================= */
+
+.production{
+    background:#111;
+    padding:120px 20px;
+}
+
+
+.production-container{
+
+    max-width:1400px;
+    margin:0 auto;
+
+    display:flex;
+    align-items:center;
+    gap:80px;
+
+}
+
+
+
+.production-content{
+
+    flex:1;
+
+}
+
+
+
+.production-label{
+
+    color:#c8a56a;
+    font-size:13px;
+    letter-spacing:3px;
+    margin-bottom:25px;
+
+}
+
+
+
+.production h2{
+
+    font-size:55px;
+    line-height:1.1;
+    font-weight:900;
+    text-transform:uppercase;
+    margin-bottom:35px;
+
+}
+
+
+
+.production h2 span{
+
+    display:block;
+    color:#c8a56a;
+
+}
+
+
+
+.production p{
+
+    font-size:19px;
+    line-height:1.7;
+    color:#ccc;
+    margin-bottom:20px;
+    max-width:600px;
+
+}
+
+
+
+/* ГАЛЕРЕЯ */
+
+.production-gallery{
+
+    flex:1;
+
+}
+
+
+
+.production-main-image{
+
+    width:100%;
+    height:520px;
+    overflow:hidden;
+    border-radius:20px;
+    margin-bottom:20px;
+
+}
+
+
+
+.production-main-image img{
+
+    width:100%;
+    height:100%;
+    object-fit:cover;
+    transition:.5s;
+
+}
+
+
+
+.production-main-image:hover img{
+
+    transform:scale(1.05);
+
+}
+
+
+
+.production-small-images{
+
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:20px;
+
+}
+
+
+
+.production-small-images img{
+
+    width:100%;
+    height:220px;
+    object-fit:cover;
+    border-radius:20px;
+
+    transition:.4s;
+
+}
+
+
+
+.production-small-images img:hover{
+
+    transform:translateY(-5px);
+
+}
+
 @media(max-width:700px){
 
 .hero{
@@ -272,6 +417,53 @@ body{
 .burger {
     width: 30px;
     height: 25px;
+}
+
+.production{
+
+    padding:80px 20px;
+
+}
+
+
+
+.production-container{
+
+    flex-direction:column;
+    gap:50px;
+
+}
+
+
+
+.production h2{
+
+    font-size:38px;
+
+}
+
+
+
+.production p{
+
+    font-size:16px;
+
+}
+
+
+
+.production-main-image{
+
+    height:350px;
+
+}
+
+
+
+.production-small-images img{
+
+    height:150px;
+
 }
 
 }
