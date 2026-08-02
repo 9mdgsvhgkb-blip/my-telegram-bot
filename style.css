@@ -21,7 +21,7 @@ body{
     background:url("images/stone-kitchen.jpg") center center/cover no-repeat;
     display:flex;
     justify-content:center;
-    align-items:center;
+    align-items:flex-start;
 }
 
 .hero::before{
