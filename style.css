@@ -561,8 +561,8 @@ body{
     position:relative;
     z-index:1;
 
-    width:34px;
-    height:34px;
+    width:60px;
+    height:60px;
 
     display:flex;
     align-items:center;
