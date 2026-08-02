@@ -253,4 +253,17 @@ body{
     font-size:32px;
 }
 
+.logo {
+    font-size: 20px;
+}
+
+.phone {
+    font-size: 15px;
+}
+
+.burger {
+    width: 30px;
+    height: 25px;
+}
+
 }
