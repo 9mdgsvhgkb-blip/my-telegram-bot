@@ -576,6 +576,103 @@ body{
     font-size:18px;
 }
 
+/* =========================
+   CONTACTS
+========================= */
+
+.contacts{
+    padding:120px 20px;
+    background:#111;
+}
+
+.contacts-container{
+    max-width:1400px;
+    margin:0 auto;
+}
+
+.contacts-label{
+    color:#c8a56a;
+    font-size:13px;
+    letter-spacing:3px;
+    margin-bottom:20px;
+}
+
+.contacts h2{
+    font-size:55px;
+    font-weight:900;
+    text-transform:uppercase;
+    margin-bottom:25px;
+}
+
+.contacts-text{
+    max-width:650px;
+    font-size:18px;
+    line-height:1.8;
+    color:#ccc;
+    margin-bottom:60px;
+}
+
+.contacts-grid{
+    display:grid;
+    grid-template-columns:repeat(2,1fr);
+    gap:30px;
+    margin-bottom:70px;
+}
+
+.contact-item{
+    background:#181818;
+    border:1px solid rgba(255,255,255,.08);
+    border-radius:20px;
+    padding:30px;
+}
+
+.contact-item span{
+    display:block;
+    font-size:13px;
+    letter-spacing:2px;
+    color:#c8a56a;
+    margin-bottom:15px;
+    text-transform:uppercase;
+}
+
+.contact-item a,
+.contact-item p{
+    color:#fff;
+    text-decoration:none;
+    font-size:24px;
+    font-weight:700;
+    line-height:1.5;
+}
+
+.contact-item a:hover{
+    color:#c8a56a;
+}
+
+.contacts-footer{
+    padding-top:30px;
+    border-top:1px solid rgba(255,255,255,.08);
+
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    gap:20px;
+}
+
+.contacts-footer p{
+    color:#888;
+    font-size:15px;
+}
+
+.contacts-footer a{
+    color:#c8a56a;
+    text-decoration:none;
+    font-size:15px;
+}
+
+.contacts-footer a:hover{
+    text-decoration:underline;
+}
+
 @media(max-width:700px){
 
 .hero{
@@ -739,6 +836,44 @@ body{
 .step-arrow{
     font-size:24px;
     padding:10px 0;
+}
+
+.contacts{
+    padding:80px 20px;
+}
+
+.contacts h2{
+    font-size:34px;
+}
+
+.contacts-text{
+    font-size:16px;
+    margin-bottom:40px;
+}
+
+.contacts-grid{
+    grid-template-columns:1fr;
+    gap:20px;
+    margin-bottom:40px;
+}
+
+.contact-item{
+    padding:25px;
+}
+
+.contact-item a,
+.contact-item p{
+    font-size:20px;
+}
+
+.contacts-footer{
+    flex-direction:column;
+    align-items:flex-start;
+}
+
+.contacts-footer p,
+.contacts-footer a{
+    font-size:14px;
 }
 
 }
