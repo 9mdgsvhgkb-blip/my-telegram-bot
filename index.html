@@ -72,7 +72,7 @@
 
                 <div class="hero-buttons">
 
-                    <a href="#" class="btn-primary">
+                    <a href="#" class="btn-primary open-modal">
                         Рассчитать бесплатно
                     </a>
 
@@ -473,6 +473,50 @@
     </div>
 
 </section>
+
+<div class="modal" id="modal">
+
+    <div class="modal-window">
+
+        <button class="modal-close">&times;</button>
+
+        <h2>Рассчитать стоимость</h2>
+
+        <p>
+            Оставьте контакты, и мы свяжемся с вами,
+            уточним детали и рассчитаем стоимость.
+        </p>
+
+        <form>
+
+            <input
+                type="text"
+                placeholder="Имя"
+                required
+            >
+
+            <input
+                type="tel"
+                placeholder="+7 (000) 000-00-00"
+                required
+            >
+
+            <button type="submit">
+                Отправить заявку
+            </button>
+
+        </form>
+
+        <div class="modal-policy">
+            Нажимая кнопку, вы соглашаетесь с
+            <a href="privacy.html">политикой конфиденциальности</a>.
+        </div>
+
+    </div>
+
+</div>
+
+<script src="script.js"></script>
 
 </body>
 
