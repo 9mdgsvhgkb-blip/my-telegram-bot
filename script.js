@@ -17,6 +17,7 @@ modal.addEventListener("click", function (e) {
     }
 });
 
+const nameInput = document.querySelector(".name");
 const phoneInput = document.querySelector(".phone");
 
 function formatNumber(value) {
@@ -91,12 +92,22 @@ const form = document.querySelector(".modal form");
 
 form.addEventListener("submit", function (e) {
 
+    const name = nameInput.value.trim();
+
+    if (!name) {
+        e.preventDefault();
+        alert("Введите имя.");
+        nameInput.focus();
+        return;
+    }
+
     const digits = phoneInput.value.replace(/\D/g, "");
 
     if (!/^7\d{10}$/.test(digits)) {
         e.preventDefault();
         alert("Введите корректный номер телефона.");
         phoneInput.focus();
+        return;
     }
 
 });
