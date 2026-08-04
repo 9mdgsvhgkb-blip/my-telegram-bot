@@ -547,6 +547,7 @@ body{
     display:flex;
     justify-content:center;
     height:50px;
+    font-size: 40px;
 }
 
 .step-arrow::before{
