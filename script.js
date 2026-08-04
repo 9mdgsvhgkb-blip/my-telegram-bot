@@ -132,12 +132,33 @@ function showToast(message, type = "error") {
 
 const burger = document.querySelector(".burger");
 const mobileMenu = document.querySelector(".mobile-menu");
+const menuClose = document.querySelector(".menu-close");
 
 
 burger.addEventListener("click", () => {
 
     burger.classList.toggle("active");
     mobileMenu.classList.toggle("active");
+
+    if(mobileMenu.classList.contains("active")){
+
+        document.body.style.overflow = "hidden";
+
+    } else {
+
+        document.body.style.overflow = "";
+
+    }
+
+});
+
+
+menuClose.addEventListener("click", () => {
+
+    mobileMenu.classList.remove("active");
+    burger.classList.remove("active");
+
+    document.body.style.overflow = "";
 
 });
 
@@ -148,6 +169,8 @@ document.querySelectorAll(".mobile-menu a").forEach(link => {
 
         mobileMenu.classList.remove("active");
         burger.classList.remove("active");
+
+        document.body.style.overflow = "";
 
     });
 
