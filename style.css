@@ -1010,6 +1010,35 @@ body{
 
 }
 
+.menu-close{
+
+    position:absolute;
+
+    top:25px;
+    right:25px;
+
+    width:40px;
+    height:40px;
+
+    background:none;
+    border:none;
+
+    color:#fff;
+
+    font-size:40px;
+    line-height:1;
+
+    cursor:pointer;
+
+}
+
+
+.menu-close:hover{
+
+    color:#c8a56a;
+
+}
+
 @media(max-width:700px){
 
 .hero{
