@@ -129,3 +129,26 @@ function showToast(message, type = "error") {
     }, 3000);
 
 }
+
+const burger = document.querySelector(".burger");
+const mobileMenu = document.querySelector(".mobile-menu");
+
+
+burger.addEventListener("click", () => {
+
+    burger.classList.toggle("active");
+    mobileMenu.classList.toggle("active");
+
+});
+
+
+document.querySelectorAll(".mobile-menu a").forEach(link => {
+
+    link.addEventListener("click", () => {
+
+        mobileMenu.classList.remove("active");
+        burger.classList.remove("active");
+
+    });
+
+});
