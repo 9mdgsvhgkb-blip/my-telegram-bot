@@ -94,10 +94,11 @@ body{
 }
 
 .hero-buttons a{
+    width: 45%;
     text-decoration:none;
     padding:18px 42px;
     border-radius:50px;
-    font-size:16px;
+    font-size:18px;
     transition:.3s;
 }
 
