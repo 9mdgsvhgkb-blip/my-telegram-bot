@@ -96,7 +96,7 @@ form.addEventListener("submit", function (e) {
 
     if (!name) {
         e.preventDefault();
-        alert("Введите имя.");
+        showToast("Введите имя");
         nameInput.focus();
         return;
     }
@@ -105,9 +105,27 @@ form.addEventListener("submit", function (e) {
 
     if (!/^7\d{10}$/.test(digits)) {
         e.preventDefault();
-        alert("Введите корректный номер телефона.");
+        showToast("Введите корректный номер телефона");
         phoneInput.focus();
         return;
     }
 
 });
+
+function showToast(message, type = "error") {
+
+    const toast = document.getElementById("toast");
+
+    toast.textContent = message;
+
+    toast.className = "";
+    toast.classList.add(type);
+    toast.classList.add("show");
+
+    clearTimeout(toast.timer);
+
+    toast.timer = setTimeout(() => {
+        toast.classList.remove("show");
+    }, 3000);
+
+}
