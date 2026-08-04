@@ -1298,4 +1298,10 @@ body{
         transform:translateY(0);
     }
 
+    #advantages,
+    #steps,
+    #contacts{
+        scroll-margin-top:50px;
+    }
+
 }
